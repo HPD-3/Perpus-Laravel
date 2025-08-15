@@ -1,31 +1,45 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" @class(['dark' => ($appearance ?? 'system') == 'dark'])>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container">
+            <h1 class="logo">MyWebsite</h1>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+                 <!-- Tambahkan tombol login -->
+                <a href="{{ url('login') }}">
+                    <button style="margin-left: 1rem;">Login</button>
+                </a>
+            </nav>
+        </div>
+    </header>
 
-        <title inertia>{{ config('app.name', 'Laravel') }}</title>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <h2>Selamat Datang di Website Kami</h2>
+            <p>Menyediakan layanan terbaik untuk Anda</p>
+            <button id="cta-btn">Mulai Sekarang</button>
+        </div>
+    </section>
 
-        <link rel="icon" href="/favicon.ico" sizes="any">
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <!-- Footer -->
+    <footer>
+        <p>© {{ date('Y') }} MyWebsite. All rights reserved.</p>
+    </footer>
 
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
 
-        @routes
-        @viteReactRefresh
-        @vite(['resources/js/app.tsx', "resources/js/pages/{$page['component']}.tsx"])
-        @inertiaHead
-        @vite('resources/js/app.tsx')
-    </head>
-    <body class="font-sans antialiased">
-        @inertia
-    </body>
+    <script>
+    document.getElementById('cta-btn').addEventListener('click', function() {
+        alert('Button clicked!');
+    });
+  </script>
+</body>
 </html>
-
-
-
-
-
-
