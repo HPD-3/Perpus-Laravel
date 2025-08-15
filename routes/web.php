@@ -11,7 +11,7 @@ Route::post('/login', [AuthController::class, 'login']);
 
 // Halaman Home
 Route::get('/', function () {
-    return Inertia::render('welcome');
+    return Inertia::render('app');
 })->name('home');
 
 // Resource Buku
