@@ -66,43 +66,69 @@ label {
     display: block;
 }
 
-.navbar {
-    background: #fff;
-    box-shadow: 0 2px 8px rgba(34,34,59,0.07);
-    width: 100%;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-}
+ body {
+     margin: 0;
+     font-family: Arial, sans-serif;
+ }
 
-.logo {
-    margin: 0;
-    font-size: 1.8rem;
-    color: #007bff;
-    font-weight: 700;
-    letter-spacing: 2px;
-}
+ /* Navbar Container */
+ .navbar {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 10px 30px;
+     background-color: #fff;
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+ }
 
-.navbar nav {
-    display: flex;
-    gap: 1.5rem;
-}
+ /* Logo dan Nama Sekolah */
+ .navbar-left {
+     display: flex;
+     align-items: center;
+ }
 
-.navbar nav a {
-    color: #22223b;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1rem;
-    transition: color 0.2s;
-    padding: 6px 10px;
-    border-radius: 4px;
-}
+ .navbar-left img {
+     height: 50px;
+     margin-right: 10px;
+ }
 
-.navbar nav a:hover,
-.navbar nav a:focus {
-    color: #007bff;
-    background: #e0e7ff;
-}
+ .navbar-left .school-name {
+     font-weight: bold;
+     font-size: 20px;
+     color: #000;
+ }
+
+ /* Menu Navigasi */
+ .navbar-right a {
+     margin-left: 25px;
+     text-decoration: none;
+     color: #9aa3b1;
+     /* warna abu-abu muda */
+     font-weight: 500;
+     transition: color 0.3s;
+ }
+
+ .navbar-right a.active,
+ .navbar-right a:hover {
+     color: #4da8f0;
+     /* warna biru aktif */
+ }
+
+ @media (max-width: 768px) {
+     .navbar {
+         flex-direction: column;
+         align-items: flex-start;
+     }
+
+     .navbar-right {
+         margin-top: 10px;
+     }
+
+     .navbar-right a {
+         margin-left: 0;
+         margin-right: 15px;
+     }
+ }
 
 .hero {
     display: flex;

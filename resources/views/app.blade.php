@@ -5,21 +5,19 @@
 </head>
 <body>
     <!-- Navbar -->
-    <header class="navbar">
-        <div class="container">
-            <h1 class="logo">MyWebsite</h1>
-            <nav>
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Services</a>
-                <a href="#">Contact</a>
-                 <!-- Tambahkan tombol login -->
-                <a href="{{ url('login') }}">
-                    <button style="margin-left: 1rem;">Login</button>
-                </a>
+             <nav class="navbar">
+                <div class="navbar-left">
+                <img src="{{ asset('images/skanic.png') }}" alt="Logo">
+                <div class="school-name">SMKN 1 CIOMAS</div>
+                </div>
+                <div class="navbar-right">
+                <a href="#" class="active">BERANDA</a>
+                <a href="#">PROFIL</a>
+                <a href="#">E-PERPUS</a>
+                <a href="#">Program Keahlian</a>
+                <a href="#">Berita & Artikel</a>
+                </div>
             </nav>
-        </div>
-    </header>
 
     <!-- Hero Section -->
     <section class="hero">
